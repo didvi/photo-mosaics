@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <style>
+        body {
+            margin: auto;
+            text-align: left;
+            font-weight: 300;
+            font-family: 'Open Sans', sans-serif;
+            color: #121212;
+        }
+
+        div.body-class {
+            padding: 100px;
+            width: 1000px;
+            margin: auto;
+            text-align: left;
+            font-weight: 300;
+            font-family: 'Open Sans', sans-serif;
+            color: #121212;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        code {
+            background-color: lightgrey;
+        }
+    </style>
+    <title>CS 194</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+    <script
+        type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+        </script>
+</head>
+
+<body>
+    <br />
+    <div class='body-class'>
+        <h1>Photo Mosaics Part 1</h1>
+        <h2>Warped Images</h2>
+        <div align="middle">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="images/dog.png" width="300px" />
+                            <figcaption align="middle">Original.</figcaption>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/dog_warp.png" width=" 300px" />
+                        <figcaption align="middle">Corrected.</figcaption>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="images/snake.png" width="300px" />
+                            <figcaption align="middle">Original.</figcaption>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/snake_correct.png"" width=" 300px" />
+                        <figcaption align="middle">Corrected.</figcaption>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <h2>Photo Mosaics</h2>
+        <p>I define the keypoints in each photo by hand and then refine them by maximizing the ssd while searching in a
+            10 pixel radius around the selected keypoint.</p>
+        <div align="middle">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="images/small.jpeg" width="300px" />
+                            <figcaption align="middle">Original.</figcaption>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/small2.jpeg" width=" 300px" />
+                        <figcaption align="middle">Original 2.</figcaption>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <img src="images/small_refined.png" width="300px" />
+                <figcaption align="middle">Mosaic.</figcaption>
+            </div>
+        </div>
+        <br>
+        <div align="middle">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="images/house2.jpeg" width="300px" />
+                            <figcaption align="middle">Original.</figcaption>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/house1.jpeg" width=" 300px" />
+                        <figcaption align="middle">Original 2.</figcaption>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <img src="images/house_pano.png" width="300px" />
+                <figcaption align="middle">Mosaic.</figcaption>
+            </div>
+        </div>
+        <br>
+        <div align="middle">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="images/ladder1.jpeg" width="300px" />
+                            <figcaption align="middle">Original.</figcaption>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/ladder2.jpeg" width=" 300px" />
+                        <figcaption align="middle">Original 2.</figcaption>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <img src="images/ladder_pano.png" width="300px" />
+                <figcaption align="middle">Mosaic. Vertical this time.</figcaption>
+            </div>
+        </div>
+        <br>
+    </div>
+    <h2>What I've Learned</h2>
+    The most practical takeaway I have is that this project has really showed me how proficient I have gotten at numpy.
+    In previous projects,
+    I have had a lot more trouble determining the right way to manipulate images, and I had to read a lot of
+    documentation. For this project, I found that I could add alpha channels and create masks for weighted averages a
+    lot quicker.
+    <br>
+    Aside from this, I also thought this project was really cool for a couple of reasons. I am quite interested in
+    photography, and learning about homography and warping images is quite interesting coming from this background. I
+    have spent quite a long time in photo editing apps trying to fix buildings that look like parallelograms or trying
+    to use the iphone panorama and having it come out quite awful. It is interesting to learn the methods behind this,
+    and to think about the different ways in which this method could be further automated and refined so that it is more
+    robust.
+    <br>
+</body>
+
+</html>
